@@ -10,4 +10,5 @@
 2. cd backend
 3. npm install
 4. Replace `OPENWEATHER_API_KEY` with the your API key from [Weather API](https://weatherapi.com/).
-5. Run the app using npm start
+5. Run the backend app using npm start
+6. Run the index.html with live server
