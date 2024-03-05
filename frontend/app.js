@@ -22,7 +22,7 @@ const fetchCurrentLocationWeather = async (position) => {
     console.log("Fetching weather for Latitude: " + currentLatitude + ", Longitude: " + currentLongitude);
 
     try {
-        const response = await fetch(`http://localhost:3000/getweather/${currentLatitude}/${currentLongitude}`);
+        const response = await fetch(`https://weather-forecast-1-3ttq.onrender.com/getweather/${currentLatitude}/${currentLongitude}`);
         const data = await response.json();
         console.log(data);
         locationDetail.innerText = `${data.name}, ${data.sys.country}`
@@ -112,7 +112,7 @@ getWeatherBtn.addEventListener('click', async () => {
 
 
     try {
-        const response = await fetch(`http://localhost:3000/current/${inputCity.value}/${unit.value}`);
+        const response = await fetch(`https://weather-forecast-1-3ttq.onrender.com/current/${inputCity.value}/${unit.value}`);
         const data = await response.json();
         console.log(data)
         const weatherIconUrl = `${weatherIconBaseUrl}${data.weather[0].icon}@2x.png`;
@@ -158,7 +158,7 @@ getForecastBtn.addEventListener('click', async () => {
     }
 
     try {
-        const response = await fetch(`http://localhost:3000/forecast/${inputCity.value}/${unit.value}`);
+        const response = await fetch(`https://weather-forecast-1-3ttq.onrender.com/forecast/${inputCity.value}/${unit.value}`);
         const data = await response.json();
         locationDetail.innerText = `${data.city.name}, ${data.city.country}`
         if (data.list && data.list.length > 0) {
