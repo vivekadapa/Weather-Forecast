@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+
+    <div class="main">
+        <div class="outer">
+            <div class="left-div">
+                <h1 class="header">forecast</h1>
+                <div class="location">
+                    <i class="fa fa-map-marker"></i>
+                    <div>
+                        <p>Location</p>
+                        <p id="location-detail"></p>
+                    </div>
+                </div>
+                <h2>Get Instant Weather Updates of Your City</h2>
+                <div class="input-grp">
+                    <input type="text" placeholder="Enter City Name" name="city" id="city">
+                    <select name="unit" id="unit">
+                        <option value="metric" selected>Celsius</option>
+                        <option value="imperial">Farenheit</option>
+                    </select>
+                </div>
+                <div class="btn-grp">
+                    <button id="get-weather-btn">Get Current Weather</button>
+                    <button id="get-forecast-btn">Get Forecast</button>
+                </div>
+            </div>
+            <div id="weather-info">
+                <div id="current-weather">
+                    <!-- Information will be displayed here when get Current Weather button is clicked -->
+                    <h1>Today</h1>
+                    <div class="detail-card">
+                        <div class="left-detail"></div>
+                        <hr>
+                        <div class="right-detail"></div>
+                    </div>
+                </div>
+                <div>
+                    <h1 id="avg-temp"></h1>
+                    <div id="forecast">
+                         <!-- Information will be displayed here when get forecast button is clicked -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

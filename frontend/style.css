@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body{
+    background: linear-gradient(to bottom,#576679,#242a36);
+}
+
+
+.input-grp,.btn-grp{
+    display: flex;
+    gap:0.5rem;
+}
+
+
+.input-grp input,select,.btn-grp button{
+    background: rgba(255, 255, 255, 0.2); 
+    color: #fff;
+    backdrop-filter: blur(1px);
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    outline: none;
+    border: none;
+}
+
+.input-grp select,.btn-grp button{
+    color: #fff;
+}
+
+.input-grp select option{
+    color: black;
+}
+
+.input-grp input::placeholder{
+    color: #fff;
+}
+
+
+.btn-grp button:hover{
+    cursor: pointer;
+    transition:all 0.3s ease-in-out;
+    transform: scale(1.05);
+}
+
+nav div button:nth-of-type(1){
+    color: white;
+    background-color: rgb(0, 115, 255);
+}
+
+nav div button:nth-of-type(2){
+    color: white;
+    background-color: rgb(255, 136, 0);
+}
+
+.main{
+    display: flex;
+    margin:auto;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 1000px;
+}
+
+.outer{
+    width:100%;
+    border-radius: 1.5rem;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.232);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+
+
+.header{
+    top:1rem;
+    left:1rem;
+    font-weight: 300;
+    position: absolute;
+    color: #222a37;
+}
+
+
+i{
+    color: white;
+    font-size: 2rem;
+}
+
+.left-div{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    height:75vh;
+    border-radius: 1.5rem;
+    background-image: url('./images/pexels1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.left-div h2{
+    color: white;
+    font-weight: 400;
+}
+
+
+
+#weather-info{
+    width: 60%;
+    height:70vh;
+    overflow-y: scroll;
+    border-radius:0rem 1.5rem 1.5rem 0rem;
+}
+
+
+.location{
+    display: flex;
+    align-items: center;
+    gap:0.5rem;
+    color: #222a37;
+    position: absolute;
+    right:1rem;
+    top:1rem;
+}
+
+.location div{
+    display: flex;
+    flex-direction: column;
+    gap:0.25rem;
+}
+
+.location i{
+    font-size: 2rem;
+    color: #222a37;
+}
+
+
+#current-weather{
+    margin: 1rem;
+}
+
+.detail-card{
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    padding:1rem;
+    display: flex;
+    gap:0.5rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.377);
+}
+
+.left-detail{
+    display: flex;
+    flex-direction: column;
+    gap:0.2rem;
+    width:50%;
+}
+
+.right-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:0.75rem;
+    width:60%;
+    font-size: 0.9rem;
+    color:#aeaeae;
+}
+
+
+.temperature{
+    font-size: 2.5rem;
+}
+
+.forecast-temp{
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.weather-icon-div{
+    display: flex;
+    align-items: center;
+}
+
+.weather-icon-div p{
+    font-size: 1.25rem;
+}
+
+.weather-properties{
+    display: flex;
+}
+
+
+#avg-temp{
+    font-weight: 600;
+    padding:0 1rem;
+    font-size: 1.5rem;
+}
+
+#forecast{
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap:1rem;
+}
+
+.forecast-item{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    gap:0.25rem;
+    padding: 0.5rem;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.409);
+}
+
+.forecast-item div{
+    display: flex;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 1010px) {
+    .main{
+        width: 100%;
+    }
+    .outer{
+        display: flex;
+        flex-direction: column;
+    }
+    .left-div{
+        width:100%;
+        border-radius: 0;
+    }
+
+    #avg-temp{
+        margin:1rem 0;
+    }
+
+    #weather-info{
+        width: 100%;
+    }
+}
+  
+
+@media screen and (max-width: 506px) {
+    .left-div h2{
+        text-align: center;
+    }
+    .forecast-item{
+        justify-content: center;
+        margin: 0 auto;
+        width: 60%;
+    }
+
+    #avg-temp{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 407px) {
+    .input-grp,.btn-grp{
+        flex-direction: column;
+        align-items: center;
+        gap:1rem;
+    }
+
+    .input-grp input,select{
+        width: 100%;
+    }
+
+    .detail-card{
+        flex-direction: column;
+    }
+    .left-detail{
+        width: 100%;
+    }  
+    .right-detail{
+        width: 100%;
+    }
+
+    .forecast-item{
+        width:80%;
+    }
+}
+
+@media screen and (max-width: 290px){
+    .location{
+        top:3rem;
+    }
+}
